@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style type="text/css">
+      #scorePlace {
+        font-size: 30px;
+        color: blue;
+      }
+      body {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperflare.com%2Fsearch%3Fwallpaper%3Dpc%2Bgaming&psig=AOvVaw27EjI2B3IM_x3FP9L7enTC&ust=1719921967748000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCGtdHnhYcDFQAAAAAdAAAAABAE);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="scorePlace"></h1>
+    <img
+      style="position: absolute"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ02FmBtg_cVnaRzQn3tsBVmvpqWCl00p7aKg&s"
+      width="70px"
+      id="myImg"
+      onclick="addScore()"
+    />
+
+    <script type="text/javascript">
+      currentScore = 0;
+      function addScore() {
+        currentScore++;
+        changePosition();
+      }
+      function changePosition() {
+        // 1700*900
+        leftPos = parseInt(Math.random() * 1700);
+        topPos = parseInt(Math.random() * 900);
+        document.getElementById("myImg").style.top = topPos + "px";
+        document.getElementById("myImg").style.left = leftPos + "px";
+
+        document.getElementById("scorePlace").innerHTML = currentScore;
+      }
+
+      setInterval(changePosition, 2000);
+    </script>
+  </body>
+</html>

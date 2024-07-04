@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number to Words Converter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      #result {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-size: 18px;
+      }
+      .answer {
+        width: 410px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label for="numberInput">Enter a number between 0 and 999:</label>
+      <input type="number" id="numberInput" min="0" max="999" required />
+      <button onclick="convertNumber()">Convert</button>
+      <div class="answer" id="result"></div>
+    </div>
+    <script>
+      function convertNumber() {
+        const numberInput = document.getElementById("numberInput");
+        const result = document.getElementById("result");
+
+        const number = parseInt(numberInput.value);
+
+        if (Number.isNaN(number)) {
+          result.textContent = "Not a number";
+          return;
+        }
+
+        if (number < 0 || number > 999) {
+          result.textContent = "Out of range";
+          return;
+        }
+
+        const ones = [
+          "",
+          "one",
+          "two",
+          "three",
+          "four",
+          "five",
+          "six",
+          "seven",
+          "eight",
+          "nine",
+        ];
+        const teens = [
+          "",
+          "eleven",
+          "twelve",
+          "thirteen",
+          "fourteen",
+          "fifteen",
+          "sixteen",
+          "seventeen",
+          "eighteen",
+          "nineteen",
+        ];
+        const tens = [
+          "",
+          "ten",
+          "twenty",
+          "thirty",
+          "forty",
+          "fifty",
+          "sixty",
+          "seventy",
+          "eighty",
+          "ninety",
+        ];
+
+        let resultText = "";
+
+        if (number < 20) {
+          resultText = ones[number];
+        } else if (number < 100) {
+          const tensDigit = Math.floor(number / 10);
+          const onesDigit = number % 10;
+
+          if (tensDigit > 0) {
+            resultText = tens[tensDigit] + " ";
+          }
+
+          if (onesDigit > 0) {
+            resultText += tensDigit === 1 ? teens[onesDigit] : ones[onesDigit];
+          }
+        } else {
+          const hundredsDigit = Math.floor(number / 100);
+          const remainingDigits = number % 100;
+
+          if (hundredsDigit > 0) {
+            resultText = ones[hundredsDigit] + " hundred ";
+          }
+
+          if (remainingDigits > 0) {
+            resultText += convertNumberToWords(remainingDigits);
+          }
+        }
+
+        result.textContent = resultText;
+      }
+
+      function convertNumberToWords(number) {
+        const ones = [
+          "",
+          "one",
+          "two",
+          "three",
+          "four",
+          "five",
+          "six",
+          "seven",
+          "eight",
+          "nine",
+        ];
+        const teens = [
+          "",
+          "eleven",
+          "twelve",
+          "thirteen",
+          "fourteen",
+          "fifteen",
+          "sixteen",
+          "seventeen",
+          "eighteen",
+          "nineteen",
+        ];
+        const tens = [
+          "",
+          "ten",
+          "twenty",
+          "thirty",
+          "forty",
+          "fifty",
+          "sixty",
+          "seventy",
+          "eighty",
+          "ninety",
+        ];
+
+        let resultText = "";
+
+        if (number < 20) {
+          resultText = ones[number];
+        } else if (number < 100) {
+          const tensDigit = Math.floor(number / 10);
+          const onesDigit = number % 10;
+
+          if (tensDigit > 0) {
+            resultText = tens[tensDigit] + " ";
+          }
+
+          if (onesDigit > 0) {
+            resultText += tensDigit === 1 ? teens[onesDigit] : ones[onesDigit];
+          }
+        } else {
+          const hundredsDigit = Math.floor(number / 100);
+          const remainingDigits = number % 100;
+
+          if (hundredsDigit > 0) {
+            resultText = ones[hundredsDigit] + " hundred ";
+          }
+
+          if (remainingDigits > 0) {
+            resultText += convertNumberToWords(remainingDigits);
+          }
+        }
+
+        return resultText;
+      }
+    </script>
+  </body>
+</html>

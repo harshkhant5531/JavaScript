@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <lable> Username: </lable>
+    <input type="text" id="display1" /><br />
+    <lable> password: </lable>
+    <input type="password" id="display2" />
+    <br />
+    <lable>ReEnter Password:</lable>
+    <input type="password" id="display3" />
+    <br />
+    <lable>Age:</lable>
+    <input type="number" id="display4" />
+    <br />
+    <lable><em>Enrollment Number:</em>:</lable>
+    <input type="number" id="display5" />
+    <br />
+    <lable>Email:</lable>
+    <input type="email" id="display6" />
+    <br />
+    <button onclick="Validation()">Submit</button>
+    <script>
+      function Validation() {
+        console.log("Submitted");
+
+        //username must be of minimum 8 characters
+        var d1 = document.getElementById("display1").value;
+        var pattern1 = /^.{8,}$/;
+        if (pattern1.test(d1)) {
+          document.getElementById("display1").innerHTML = "Username is Valid";
+          document.getElementById("display1").value = "";
+        } else {
+          console.log(" Username is Invalid");
+        }
+        //password must contain at least 1 digit and 1 special character and should be between8-12 characters
+        var d2 = document.getElementById("display2").value;
+        var pattern2 = /^(?=.*\d)(?=.*[\W_]).{8,12}$/;
+        if (pattern2.test(d2)) {
+          document.getElementById("display2").innerHTML = "Password is Valid";
+          document.getElementById("display2").value = "";
+        } else {
+          console.log(" Password is Invalid");
+        }
+        //password and repeat password must be same
+        var d3 = document.getElementById("display3").value;
+        var pattern3 = /^(?=.*\d)(?=.*[\W_]).{8,12}$/;
+        if (pattern3.test(d3)) {
+          if ((pattern2 = pattern3)) {
+            document.getElementById("display3").innerHTML =
+              "Repet-Password is Valid";
+            document.getElementById("display3").value = "";
+          }
+        } else {
+          console.log(" Repet-Password is Invalid");
+        }
+
+        //age must be greater than 18(calculate from date of birth)
+        var age = document.getElementById("display4").value;
+        if (age > 18) {
+          document.getElementById("display2").innerHTML = "Age is Valid";
+          document.getElementById("display2").value = "";
+        } else {
+          console.log("Age is Invalid");
+        }
+
+        //enrollment must be of 11 digits
+        var d5 = document.getElementById("display5").value;
+        var pattern4 = /^\d{11}$/;
+        if (pattern4.test(d5)) {
+          document.getElementById("display5").innerHTML =
+            "Enrollment Number is Valid";
+          document.getElementById("display5").value = "";
+        } else {
+          console.log(" Enrollment Number is Invalid");
+        }
+
+        //email validation
+        var d5 = document.getElementById("display5").value;
+        var pattern4 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (pattern4.test(d5)) {
+          document.getElementById("display6").innerHTML = "Email is Valid";
+          document.getElementById("display6").value = "";
+        } else {
+          console.log("Email is Invalid");
+        }
+      }
+    </script>
+  </body>
+</html>

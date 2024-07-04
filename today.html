@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value="Enter your number" id="insideBox" />
+    <button onclick="Adding()">Add</button>
+    <h1 id="output1"></h1>
+    <script>
+      function Adding() {
+        var ans = document.getElementById("insideBox").value;
+        //phone number
+        let pattern = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
+        if (ans.test(pattern)) {
+          document.getElementById("output1").innerHTML = "Valid";
+        } else {
+          document.getElementById("output1").innerHTML = "Invalid";
+        }
+      }
+    </script>
+  </body>
+</html>

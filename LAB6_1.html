@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Background Color Using Button</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        padding-top: 100px;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px 20px;
+        cursor: crosshair;
+      }
+    </style>
+    <script>
+      function getRandomColor() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return "rgb(" + r + ", " + g + ", " + b + ")";
+      }
+
+      function changeBackgroundColor() {
+        var randomColor = getRandomColor();
+        document.body.style.backgroundColor = randomColor;
+      }
+      function cc() {
+        c = setInterval(changeBackgroundColor, 2000);
+      }
+      function st() {
+        s = clearInterval(c);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <button onclick="cc()">Start</button>
+    <button onclick="st()">Stop</button>
+  </body>
+</html>

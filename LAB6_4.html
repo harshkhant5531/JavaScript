@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myDiv {
+        height: 300px;
+        width: 300px;
+        background-color: aquamarine;
+        text-align: center;
+        font-weight: 700;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">Original Div</div>
+    <button id="btn" onclick="changeProperties()">Change</button>
+    <script>
+      a = document.getElementById("myDiv");
+      ChangeButton = document.getElementById("btn");
+      function changeProperties() {
+        a.style.backgroundcolor = "red";
+        a.style.fontsize = "40px";
+      }
+
+      ChangeButton.addEventListener("click", changeProperties);
+    </script>
+  </body>
+</html>

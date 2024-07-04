@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAB4_4</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <script>
+        let arr = [
+          {
+            createdAt: "2024-06-25T01:32:29.157Z",
+            name: "Sonja Kerluke",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/170.jpg",
+            id: "1",
+          },
+          {
+            createdAt: "2024-06-24T11:29:16.117Z",
+            name: "Bert Carroll",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1197.jpg",
+            id: "2",
+          },
+          {
+            createdAt: "2024-06-25T02:34:20.200Z",
+            name: "Deanna Robel",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/146.jpg",
+            id: "3",
+          },
+          {
+            createdAt: "2024-06-24T16:59:51.931Z",
+            name: "Steve Friesen",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/55.jpg",
+            id: "4",
+          },
+          {
+            createdAt: "2024-06-24T23:54:20.151Z",
+            name: "Florence Ratke",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/136.jpg",
+            id: "5",
+          },
+          {
+            createdAt: "2024-06-25T03:07:30.825Z",
+            name: "Ernesto Rath PhD",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/884.jpg",
+            id: "6",
+          },
+          {
+            createdAt: "2024-06-24T10:53:26.232Z",
+            name: "Margie Walter",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/592.jpg",
+            id: "7",
+          },
+          {
+            createdAt: "2024-06-24T06:32:14.931Z",
+            name: "Dr. Ivan Zboncak V",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/764.jpg",
+            id: "8",
+          },
+          {
+            createdAt: "2024-06-24T10:41:21.422Z",
+            name: "Marlon Harber",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/880.jpg",
+            id: "9",
+          },
+          {
+            createdAt: "2024-06-24T15:58:38.172Z",
+            name: "Virginia Rutherford",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+            id: "10",
+          },
+          {
+            createdAt: "2024-06-24T10:24:53.354Z",
+            name: "Dr. Wilbert Kuhlman",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/725.jpg",
+            id: "11",
+          },
+          {
+            createdAt: "2024-06-25T00:44:38.620Z",
+            name: "Guy Brakus",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1199.jpg",
+            id: "12",
+          },
+          {
+            createdAt: "2024-06-24T12:56:24.305Z",
+            name: "Ms. Corey Hane",
+            avatar:
+              "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/751.jpg",
+            id: "13",
+          },
+        ];
+        for (product of arr) {
+          document.write(`<div class="card p-2 m-3 col-3" style="width: 18rem;">
+  <img src="${product.avatar}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title m-3">${product.name}</h5>
+    <p class="card- m-2">${product.createdAt}</p>
+    
+  </div>
+</div>`);
+        }
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>

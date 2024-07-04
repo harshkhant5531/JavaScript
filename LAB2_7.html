@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab2_7</title>
+  </head>
+  <body>
+    <label> Enter a word: </label>
+    <input type="text" id="wordInput" placeholder="Enter a word" /><br />
+    <button onclick="findpositionsAndSubstring()">'a'</button><br />
+    <div id="result"></div>
+    <script>
+      function findpositionsAndSubstring() {
+        var inputword = document
+          .getElementById("wordInput")
+          .value.toLowerCase();
+        var firstIndex = inputword.indexOf("a") + 1;
+        var lastIndex = inputword.lastIndexOf("a") + 1;
+        var stringbetween = inputword.slice(firstIndex, lastIndex);
+
+        var resultDisplay = document.getElementById("result");
+        resultDisplay.innerHTML = "First 'a' of string:" + firstIndex + "<br>";
+        resultDisplay.innerHTML = "Last 'a' of string:" + lastIndex + "<br>";
+        resultDisplay.innerHTML = "String between:" + stringbetween;
+      }
+    </script>
+  </body>
+</html>

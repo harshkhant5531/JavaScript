@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const t2 = [
+        {
+          createdAt: "blob",
+          name: "bear",
+          avatar: "Urbana",
+          vatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/140.jpg",
+          id: "1",
+        },
+        {
+          createdAt: "datetime",
+          name: "rabbit",
+          avatar: "Kuhicmouth",
+          vatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/140.jpg",
+          id: "2",
+        },
+        {
+          createdAt: "date",
+          name: "horse",
+          avatar: "Port Isaiasland",
+          vatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/140.jpg",
+          id: "3",
+        },
+        {
+          createdAt: "enum",
+          name: "rabbit",
+          avatar: "Lake Elody",
+          vatar:
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperengine.space%2Fcollections%2Fbest-in-4k&psig=AOvVaw2AHIUUsC0oak7fFNICi194&ust=1718893737461000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjC9I3x54YDFQAAAAAdAAAAABAE",
+          id: "4",
+        },
+      ];
+
+      document.write('<table border="2">');
+      document.write(
+        "<tr><th>createdAt</th><th>vatar</th><th>name</th><th>vatar</th><th>id</th><tr>"
+      );
+      for (let i = 0; i < t2.length; i++) {
+        document.write("<tr>");
+        document.write("<td>" + t2[i].createdAt + "</td>");
+        document.write("<td>" + "<img src=+t2.[i].vatar+>" + "</td>");
+        document.write("<td>" + t2[i].name + "</td>");
+        document.write("<td>" + t2[i].avatar + "</td>");
+        document.write("<td>" + t2[i].id + "</td>");
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </body>
+</html>

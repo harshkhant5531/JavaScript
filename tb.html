@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const table = [
+        {
+          createdAt: "2024-06-18T05:26:40.551Z",
+          name: "Alma Daugherty",
+          avatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/140.jpg",
+          StudenName: "facilitate",
+          id: "1",
+        },
+        {
+          createdAt: "2025-06-18T05:26:40.551Z",
+          name: "Alma erty",
+          avatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/140.jpg",
+          StudenName: "facili",
+          id: "2",
+        },
+      ];
+      document.write('<table border="2">');
+      document.write(
+        "<tr><th>create</th><th>Name</th><th>avatar</th><th>profesion</th><th>id</th></tr>"
+      );
+      for (let i = 0; i < table.length; i++) {
+        document.write("<tr>");
+        document.write("<td>" + table[i].createdAt + "</td>");
+        document.write("<td>" + table[i].name + "</td>");
+        document.write("<td>" + '<img src ="' + table[i].avatar + ',"></td>');
+        document.write("<td>" + table[i].StudenName + "</td>");
+        document.write("<td>" + table[i].id + "</td>");
+        document.write("</tr>");
+
+        document.write("<tr>");
+        document.write("<td>" + table[i].createdAt + "</td>");
+        document.write("<td>" + table[i].name + "</td>");
+        document.write("<td>" + '<img src ="' + table[i].avatar + ',"></td>');
+        document.write("<td>" + table[i].StudenName + "</td>");
+        document.write("<td>" + table[i].id + "</td>");
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIRST JS</title>
+    <style>
+      button {
+        margin-bottom: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="display: flex; justify-content: center; align-items: center">
+      BULB CLICKING
+    </h1>
+    <div style="margin-left: 280px">
+      <button
+        onclick="document.getElementById('myImage').src='https://i.pinimg.com/originals/df/30/ce/df30ce307f9cfe83914bd0bb0f6c5ed1.gif'"
+        style="padding: 60px; font-size: 20px"
+      >
+        Turn on the light
+      </button>
+
+      <img
+        id="myImage"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcuw6pJcZ1_XLSjUn-fCBiYgff5jF2CXZxT3uMaOPV1g&s"
+        style="width: 400px; height: 400px"
+      />
+
+      <button
+        onclick="document.getElementById('myImage').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcuw6pJcZ1_XLSjUn-fCBiYgff5jF2CXZxT3uMaOPV1g&s'"
+        style="padding: 60px; font-size: 20px"
+      >
+        Turn off the light
+      </button>
+    </div>
+  </body>
+</html>

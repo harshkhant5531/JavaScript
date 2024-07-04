@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>MOUSE EVENT</h1>
+    <p id="para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi
+      veritatis qui, quas cum totam voluptates suscipit? Error suscipit quae
+      eaque nostrum architecto porro repudiandae facilis illum magnam ipsum.
+      Temporibus?
+    </p>
+    <div id="output"></div>
+    <script>
+      var Events = document.getElementById("para");
+      var display = document.getElementById("output");
+
+      function printEvent(Events) {
+        display.innerHTML = `Event Fired::${Events.type}`;
+      }
+      //----->Click event
+      //   Events.addEventListener("click", printEvent);
+
+      //----->DoubleClikck
+      //   Events.addEventListener("dblclick", printEvent);
+
+      //   //----->MouseDown
+      //   Events.addEventListener("mousedown", printEvent);
+      //----->MouseOver
+      //   Events.addEventListener("mouseover", printEvent);
+    </script>
+  </body>
+</html>

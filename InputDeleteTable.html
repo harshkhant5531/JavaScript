@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding and Deleting Inside The Table</title>
+    <style>
+      #adddingInsideTheTable {
+        height: 30px;
+        width: 100px;
+        text-align: center;
+        background-color: green;
+        color: white;
+        padding: 7px;
+        margin: 20px;
+        margin-left: 40px;
+        box-shadow: 0px 2px 10px 4px green;
+      }
+      #deleting {
+        background-color: red;
+        color: white;
+        box-shadow: 0px 2px 10px 4px red;
+        margin-left: 20px;
+      }
+      input {
+        width: 350px;
+        height: 40px;
+      }
+      #tab {
+        width: 150px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="inputText"
+      value="Create your Favorite Programming Lamgauge List"
+    /><br />
+    <button onclick="Adding()" id="adddingInsideTheTable">Add</button>
+    <div id="result">asdf</div>
+    <script>
+      "<div id=array>";
+      let data = ["WD", "DSA", "C", "Java"];
+      s("</div>");
+      function displayInsideTheTable() {
+        resultByUser = document.getElementById("result");
+        blankSpace = "";
+        blankSpace += "<table id='tab' border='1'>";
+        for (let i = 0; i < data.length; i++) {
+          blankSpace += "<tr>";
+          blankSpace += "<td>" + data[i] + "</td>";
+          blankSpace +=
+            "<td><button id='deleting' onclick='Removing(" +
+            i +
+            ")'>Delete</button></td>";
+
+          blankSpace += "</tr>";
+        }
+        blankSpace += "</table>";
+        resultByUser.innerHTML = blankSpace;
+      }
+      displayInsideTheTable();
+
+      //Adding the data of Table
+      function Adding() {
+        addingData = document.getElementById("inputText");
+        data.push(addingData.value);
+        addingData.value = "";
+        displayInsideTheTable();
+      }
+
+      //Removing the data of table
+      function Removing(eleminate) {
+        data.splice(eleminate, 1);
+        displayInsideTheTable();
+      }
+    </script>
+  </body>
+</html>

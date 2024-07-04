@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insideJavascript</title>
+  </head>
+
+  <body>
+    <h1 style="color: red; font-size: 50px; font-weight: bolder">Hello</h1>
+    <script>
+      // printing word in window screen
+      document.write("Hadala");
+
+      //using css proprty inside script tag
+      document.body.style.backgroundColor = "yellow";
+
+      //function using sum
+      function sum() {
+        var a = 10;
+        var b = 15;
+        var c = a + b;
+        document.write(c);
+      }
+      sum();
+
+      //function using loop
+      function loop() {
+        for (var i = 0; i <= 5; i++) {
+          document.write("darshan <br/>");
+          document.body.style.fontSize = "30px";
+          document.body.style.fontFamily = "poppins";
+          document.body.style.color = "blue";
+        }
+      }
+      loop();
+    </script>
+    <h1 style="color: red; font-size: 50px; font-weight: bolder">Students</h1>
+  </body>
+</html>
